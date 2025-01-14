@@ -1,27 +1,27 @@
 
-// function setAuthCredentials(token, userId, username) {
-//     localStorage.setItem('auth-token', token);
-//     localStorage.setItem('auth-user', username);
-//     localStorage.setItem('auth-user-id', userId);
-// }
+function setAuthCredentials(token, userId, username) {
+    localStorage.setItem('auth-token', token);
+    localStorage.setItem('auth-user', username);
+    localStorage.setItem('auth-user-id', userId);
+}
 
-// function removeAuthCredentials() {
-//     localStorage.removeItem('auth-token');
-//     localStorage.removeItem('auth-user');
-//     localStorage.removeItem('auth-user-id');
-// }
+function removeAuthCredentials() {
+    localStorage.removeItem('auth-token');
+    localStorage.removeItem('auth-user');
+    localStorage.removeItem('auth-user-id');
+}
 
-// function getAuthToken() {
-//     return localStorage.getItem('auth-token');
-// }
+function getAuthToken() {
+    return localStorage.getItem('auth-token');
+}
 
-// function getAuthUser() {
-//     return localStorage.getItem('auth-user');
-// }
+function getAuthUser() {
+    return localStorage.getItem('auth-user');
+}
 
-// function getAuthUserId() {
-//     return localStorage.getItem('auth-user-id');
-// }
+function getAuthUserId() {
+    return localStorage.getItem('auth-user-id');
+}
 
 
 function jsonToFormData(json){
