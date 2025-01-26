@@ -1,6 +1,8 @@
 function redirectToOffer(id){
     if(currentUser){
         window.location.href = "./offer.html?id=" + id;
+    } else {
+        window.location.href = "./login.html";
     }
 }
 

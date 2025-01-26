@@ -44,13 +44,8 @@ function openReviewEditDialog(reviewId) {
         showToastMessage(true, ['Bewertung konnte nicht gefunden werden'])
     } else {
         openDialog('rating_dialog');
-        document.getElementById('rating_dialog').innerHTML = getReviewDialogformTemplate(currentReviews[index],true)
+        document.getElementById('rating_dialog').innerHTML = getReviewDialogformTemplate(currentReviews[index])
     }
-}
-
-function openReviewDeleteDialog(reviewId) {
-    document.getElementById('rating_dialog').innerHTML = getDeleteOrNotTemplate(reviewId)
-
 }
 
 async function onReviewSubmit(event, reviewId) {

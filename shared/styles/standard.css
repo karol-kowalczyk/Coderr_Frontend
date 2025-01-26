@@ -7,6 +7,10 @@ a {
     text-decoration: none;
 }
 
+ul {
+    list-style-type: none;
+}
+
 body {
     min-height: 100vh;
     display: flex;
@@ -190,13 +194,4 @@ main {
 
 .rotate_half{
     transform: rotate(180deg);
-}
-
-
-
-@media screen and (max-width: 480px) {
-    .p_top_s {
-        padding-top: 36px;
-    }
-
 }

@@ -1,26 +1,26 @@
 
 function setAuthCredentials(token, userId, username) {
-    localStorage.setItem('auth-token', token);
-    localStorage.setItem('auth-user', username);
-    localStorage.setItem('auth-user-id', userId);
+    sessionStorage.setItem('auth-token', token);
+    sessionStorage.setItem('auth-user', username);
+    sessionStorage.setItem('auth-user-id', userId);
 }
 
 function removeAuthCredentials() {
-    localStorage.removeItem('auth-token');
-    localStorage.removeItem('auth-user');
-    localStorage.removeItem('auth-user-id');
+    sessionStorage.removeItem('auth-token');
+    sessionStorage.removeItem('auth-user');
+    sessionStorage.removeItem('auth-user-id');
 }
 
 function getAuthToken() {
-    return localStorage.getItem('auth-token');
+    return sessionStorage.getItem('auth-token');
 }
 
 function getAuthUser() {
-    return localStorage.getItem('auth-user');
+    return sessionStorage.getItem('auth-user');
 }
 
 function getAuthUserId() {
-    return localStorage.getItem('auth-user-id');
+    return sessionStorage.getItem('auth-user-id');
 }
 
 
@@ -65,6 +65,7 @@ async function getData(endpoint) {
             headers: createHeaders(),
         });
         const responseData = await response.json();
+
         return {
             ok: response.ok,
             status: response.status,
@@ -105,7 +106,7 @@ async function postData(endpoint, data) {
 }
 
 async function postDataWJSON(endpoint, data) {
-    console.log(data);
+
     let header = createHeaders();
     header['Content-Type'] = 'application/json';
     try {
@@ -116,6 +117,8 @@ async function postDataWJSON(endpoint, data) {
         });
         
         const responseData = await response.json();
+            
+    console.log(responseData)
         return {
             ok: response.ok,
             status: response.status,
@@ -191,10 +194,19 @@ async function deleteData(endpoint) {
             headers: createHeaders(),
         });
 
+        let responseData = null;
+        if (response.status !== 204) { 
+            try {
+                responseData = await response.json();
+            } catch (error) {
+                console.warn('Kein gültiges JSON im Response:', error);
+                responseData = null;
+            }
+        }
         return {
             ok: response.ok,
             status: response.status,
-            data: {}
+            data: responseData
         };
 
     } catch (error) {

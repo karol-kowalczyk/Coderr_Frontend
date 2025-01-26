@@ -90,6 +90,15 @@ h1{
     max-width: 1440px;
 }
 
+.privacy_container p, li{
+    max-width: 1440px;
+}
+
+.privacy_container {
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
 @media only screen and (min-width: 1024px) and (max-width: 1124px) {
     .landingheader_box {
         height: 500px;

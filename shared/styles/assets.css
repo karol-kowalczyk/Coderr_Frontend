@@ -8,11 +8,6 @@
     white-space: nowrap;
 }
 
-.std_btn_disabled{
-    cursor: default !important;
-    background-color: rgb(121, 121, 121) !important;
-}
-
 .btn_prime {
     background-color: var(--btn-prime-color);
     transition: all 0.3s ease;
@@ -490,6 +485,12 @@ hr {
     left: 0;
 }
 
+
+
+
+
+
+
 .toast_msg{
     position: fixed;
     bottom: calc(var(--form-pad) / 2);
@@ -503,6 +504,7 @@ hr {
     animation: slideInFromLeft 0.25s ease-out forwards;
     z-index: 6;
 }
+
 
 @keyframes slideInFromLeft {
     0% {
@@ -564,16 +566,4 @@ hr {
 .toast_msg_right ul{
     flex: 1;
     padding: 0px 16px;
-}
-
-.column10gap {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.container-position {
-    gap: 30px;
-    margin: 8px 56px;
-    height: 100%;
 }

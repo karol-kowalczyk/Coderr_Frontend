@@ -110,10 +110,6 @@ button {
     color: var(--font_white_color);
 }
 
-.font_error_color{
-    color: var(--btn-delete-color);
-}
-
 
 /* Alignments */
 

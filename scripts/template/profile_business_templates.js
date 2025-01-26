@@ -148,9 +148,7 @@ function getBusinessOrderTemplate(order) {
                                     ${getOrderFeatureListTemplate(order.features)}
                                     </ul>
                                 </div>
-                                <hr>
                             </div>
-                            
                         </li>
     `
 }
@@ -250,7 +248,7 @@ function getBusinessDialogFormTemplate() {
                             class="d_flex_cc_gl btn_round_l btn_edit abs_pos_edit_btn_m">
                             <img src="./assets/icons/close_black.svg" alt="">
                         </button>
-                        <h2 class="font_prime_color p_top_s">Profil editieren</h2>
+                        <h2 class="font_prime_color">Profil editieren</h2>
                         <div class="image_input_box">
                             <img id="business_profile_img_input_output" class="profile_img_l" src="${getPersonImgPath(currentUser.file)}" alt="Aktuelles Profilbild">
                             <div onclick="clickFileInput('business_profile_img_input')"
@@ -281,7 +279,7 @@ function getBusinessDialogFormTemplate() {
                         </div>
                         <div class="form_group">
                             <label for="business_edit_tel">Telefonnummer:</label>
-                            <input type="number" id="business_edit_tel" name="tel" value="${currentUser.tel}" required
+                            <input type="tel" id="business_edit_tel" name="tel" value="${currentUser.tel}" required
                                 class="input_field" autocomplete="off">
                         </div>
                         <div class="form_group">
