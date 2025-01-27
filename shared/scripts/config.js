@@ -4,8 +4,8 @@ const GUEST_LOGINS = {
         password: 'asdasd'
     },
     business : {
-        username: 'kevinneu',
-        password: 'kevinneu'
+        username: 'kevin',
+        password: 'asdasd'
     }
 }
 
